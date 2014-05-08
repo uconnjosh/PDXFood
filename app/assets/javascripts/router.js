@@ -2,4 +2,5 @@
 
 PDXFood2.Router.map(function() {
   this.resource('carts', { path: '/' });
+  this.resource('cart', { path: '/contacts/:id'});
 });
