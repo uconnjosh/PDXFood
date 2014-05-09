@@ -4,5 +4,8 @@ PDXFood2.Router.map(function() {
   this.resource('carts', { path: '/' });
   this.resource('new_cart', { paths: '/carts/new'});
   this.resource('cart', { path: '/carts/:id'});
+  this.resource('reviews')
+  this.resource('review')
+
 
 });

@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
   def index
   	@reviews = Review.all
-  	render :json => @review
+  	render :json => @reviews
   end
 
   def create
@@ -16,11 +16,7 @@ class ReviewsController < ApplicationController
 
   def show
   	@review = Review.find(params[:id])
-  	if @review.update(review_params)
-  		head :no_content
-  	else
-  		render :json => @review.errors, :status => 422
-  	end
+    render :json => @review
   end
 
   def destroy

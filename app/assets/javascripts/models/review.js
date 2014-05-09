@@ -2,6 +2,7 @@ PDXFood2.Review = DS.Model.extend({
   title: DS.attr(),
   content: DS.attr(),
   rating: DS.attr(),
-  cart_id: DS.attr()
+  cart_id: DS.attr(),
+  cart: DS.belongsTo('cart', {async: true})
 });
 

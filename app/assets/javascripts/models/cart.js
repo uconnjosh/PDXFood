@@ -3,5 +3,6 @@ PDXFood2.Cart = DS.Model.extend({
 	description: DS.attr(),
 	streetNumber: DS.attr(),
 	street: DS.attr(),
-	city: DS.attr()
+	city: DS.attr(),
+	reviews: DS.hasMany('review', {async: true})
 });
