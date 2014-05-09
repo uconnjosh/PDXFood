@@ -10,7 +10,7 @@ class CartsController < ApplicationController
     if @cart.save
       render :json => @cart, :status => 201
     else
-      render :json => @cart.errors, :status => 422
+      render :json => {:errors => @cart.errors}, :status => 422
     end
   end
 
@@ -24,7 +24,7 @@ class CartsController < ApplicationController
     if @cart.update(cart_params)
       head :no_content
     else
-      render :json => @cart.errros, :status => 422
+      render :json => {:errors => @cart.errros}, :status => 422
     end
   end
 

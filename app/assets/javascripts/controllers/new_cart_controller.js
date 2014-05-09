@@ -7,8 +7,10 @@ PDXFood2.NewCartController = Ember.ObjectController.extend({
   		model.save()
   		.then(function() {
   			controller.transitionToRoute('cart', model);
-  		});
+  		})
+      .catch(function() {
+        alert("Please fix the problems noted in red.")
+      });
   	}
   }
-
 });
