@@ -1,6 +1,5 @@
 PDXFood2.NewCartController = Ember.ObjectController.extend({
-  needs: 'review',
-  review: Ember.computed.alias("controllers.review"),
+  
   actions: {
   	createCart: function() {
   		var model = this.get('model');

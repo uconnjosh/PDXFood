@@ -8,10 +8,28 @@
     <dd>{{streetNumber}} {{street}}, {{city}}</dd>
  </dl>
  <br />
+ <div class="new-review">
+
+
+   <h3>Review {{name}} </h3>
+   {{#if title}}
+   <p class="text-muted">{{title}}</p>
+   {{/if}}
+
+   {{textarea valueBinding="title"}}
+   <button {{action 'createReview'}} class="btn btn-primary">Review</button>
+ </div>
+
  <h4>Reviews:</h4>
  <ul>
- {{#each reviews}}
- <li>{{title}}</li>
-{{/each}}
-</ul>
+   {{#each review in reviews}}
+     <li>{{review.title}}</li>
+ </ul>
+   {{/each}}
+
+
+
+
+
+
 
