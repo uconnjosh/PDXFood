@@ -1,0 +1,30 @@
+link-to "carts" | Home
+h1 = name
+
+dl
+dt Description
+dd = description
+dt Location
+dd
+  = streetNumber
+  = street
+  = city
+br
+
+.new-review
+h3 Review {{name}} 
+if title
+  p = title
+/if
+
+Ember.TextField valueBinding="title"
+button{action 'createReview'} Create Review
+
+h4 Reviews
+ul
+  each review in reviews
+    li = review.title
+
+
+
+ 

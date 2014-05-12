@@ -19,6 +19,7 @@ gem 'actionpack-action_caching'
 gem 'ember-rails'
 gem 'ember-data-source', '~> 1.0.0.beta.7'
 gem 'active_model_serializers'
+gem 'emblem-rails'
 
 
 group :development do
