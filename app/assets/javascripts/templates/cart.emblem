@@ -1,3 +1,4 @@
+<div class="container">
 link-to "carts" | Home
 h1 = name
 
@@ -18,12 +19,16 @@ if title
 /if
 
 Ember.TextField valueBinding="title"
-button{action 'createReview'} Create Review
+br
+br
+button.btn.btn-success{action 'createReview'} Create Review
 
 h4 Reviews
 ul
   each review in reviews
     li = review.title
+</div>
+
 
 
 
