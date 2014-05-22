@@ -3,7 +3,9 @@
 <br />
 <ul>
 {{#each}}
-<li>{{#link-to 'cart' this}}{{name}}{{/link-to}}</li>
+  {{#if name}}
+    <li>{{#link-to 'cart' this}}{{name}}{{/link-to}}</li>
+  {{/if}}
 {{/each}}
 </ul>
 <br />

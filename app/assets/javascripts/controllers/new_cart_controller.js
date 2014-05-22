@@ -1,7 +1,8 @@
 PDXFood2.NewCartController = Ember.ObjectController.extend({
   
   actions: {
-  	createCart: function() {
+    
+  	addCart: function() {
   		var model = this.get('model');
   		var controller = this;
 
