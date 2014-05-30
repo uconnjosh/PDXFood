@@ -1,13 +1,20 @@
+{{#link-to 'carts.new'}}Add Another Cart{{/link-to}}
 <div class="container">
 <h1>PDXFood.com</h1>
 <br />
-<ul>
-{{#each}}
-  {{#if name}}
-    <li>{{#link-to 'cart' this}}{{name}}{{/link-to}}</li>
-  {{/if}}
-{{/each}}
-</ul>
-<br />
-{{#link-to 'new_cart'}}Add Another Cart{{/link-to}}
+<div class="list">
+  <ul>
+  {{#each}}
+    {{!#if name}}
+      <li>{{#link-to 'cart' this}}{{name}}{{/link-to}}</li>
+    {{!/if}}
+  {{/each}}
+  </ul>
+</div>
+
+<div class="listing">
+  {{outlet}}
+</div>
+
+
 </div>
