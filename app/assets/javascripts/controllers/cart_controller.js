@@ -13,6 +13,7 @@ PDXFood2.CartController = Ember.ObjectController.extend({
   			controller.set('title', '');
   			controller.get('model.reviews').addObject(review);
   		});
-  	}
+  	},
+    
   }
 });
