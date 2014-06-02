@@ -1,7 +1,4 @@
-{{#link-to 'carts'}}Home{{/link-to}}
-
-<div class="container">
-<h1>Yet ANOTHER PDX Food Cart? Add it below: </h1>
+<h1>Yet ANOTHER PDX Food Cart? Add it below:</h1>
 
 <form>
   <div class="form-group">
@@ -13,7 +10,7 @@
     </div>
   <div class="form-group">
     <label for="description">Description</label>
-    {{input type="text" id="description" class="form-control" value=description}}
+    {{textarea id="description" class="form-control" value=description}}
   </div>
     <div class="form-group">
     <label for="streetNumber">Street Number</label>
@@ -31,4 +28,3 @@
   <button {{action anotherCart}} class="btn btn-primary">Add Cart</button>
   </form>
 
-  </div>

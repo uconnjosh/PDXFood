@@ -1,5 +1,3 @@
-<div class="container">
-link-to "carts" | Home
 h1 = name
 
 dl
@@ -27,7 +25,6 @@ h4 Reviews
 ul
   each review in reviews
     li = review.title
-</div>
 
 
 
