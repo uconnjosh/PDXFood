@@ -1,19 +1,23 @@
 PDXFood2.CartController = Ember.ObjectController.extend({
   title: ' ',
   actions: {
-  	createReview: function() {
-  		var review = this.store.createRecord('review', {
-  			title: this.get('title'),
-  			cart: this.get('model')
-  		});
+    createReview: function() {
+      var review = this.store.createRecord('review', {
+        title: this.get('title'),
+        cart: this.get('model')
+      });
 
-  		var controller = this;
+      var controller = this;
 
-  		review.save().then(function(review){
-  			controller.set('title', '');
-  			controller.get('model.reviews').addObject(review);
-  		});
-  	},
-    
+      review.save().then(function(review){
+        controller.set('title', '');
+        controller.get('model.reviews').addObject(review);
+      });
+    },
+    deleteCart: function() {
+      if (confirm("Are you positively sure?")) {
+        this.get('model').destroyRecord();
+      }
+    }
   }
 });

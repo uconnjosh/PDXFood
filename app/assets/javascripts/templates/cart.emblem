@@ -1,4 +1,7 @@
 h1 = name
+a click="deleteCart" X
+
+
 
 dl
 dt Description
